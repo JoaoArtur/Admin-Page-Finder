@@ -1,0 +1,39 @@
+body {
+	font-family: Raleway,"Trebuchet MS";
+	background: #dddddd;
+}
+h1,h2,h3 {
+	text-shadow: #d35400 0 0 8px;
+	color: #d35400;
+}
+.ok {
+	text-shadow: lime 0 0 8px;
+	color: lime;
+}
+.no {
+	text-shadow: #d35400 0 0 8px;
+	color: #d35400;
+}
+a {
+	text-decoration: none;
+	text-shadow: #d35400 0 0 8px;
+	color: #d35400;
+}
+*{
+	margin: 0;padding: 0;
+}
+input[type="text"] {
+	background-color: white;
+	border: none;
+	border-bottom: 5px solid #d35400;
+	width: 300px;
+	height: 30px;
+}
+input[type="submit"] {
+	background-color: #d35400;
+	border: none;
+	border-bottom: 5px solid #d35400;
+	width: 30px;
+	height: 30px;
+	color: #ddd;
+}
