@@ -43,16 +43,16 @@ $adminpages = array('admin.php','admin/','admin/login.jsp','administrator/','mod
 	<center>
 			<h1>Admin Page Finder PHP</h1>
 			<h2>Coded by K3N1</h2>
-			<h3>Scanning <?=$url?></h3>
+			<h3>Scanning <?=htmlspecialchars($url)?></h3>
 			<?php
 				foreach($adminpages as $page) {
 					$caminho = $url.$page;
 					$retornado = get_headers($caminho);
 
 					if (eregi('200', $retornado[0])) {
-						echo "<p class='ok'><b>[+] ".$url.$page."</b></p>";
+						echo '<p class="ok"><b>[+] <a href="'.htmlspecialchars($url.$page).'">'.$url.$page."<a></b></p>";
 					} else {
-						echo "<p class='no'>[-] ".$url.$page."</p>";
+						echo '<p class="no">[-] <a href="'.htmlspecialchars($url.$page).'">'.htmlspecialchars($url.$page).'</a></p>';
 					}
 				}
 			?>
