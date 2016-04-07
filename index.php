@@ -50,9 +50,9 @@ $adminpages = array('admin.php','admin/','admin/login.jsp','administrator/','mod
 					$retornado = get_headers($caminho);
 
 					if (eregi('200', $retornado[0])) {
-						echo "<p class='ok'><b>[+] ".$url.$page."</b></p>";
+						echo '<p class="ok"><b>[+] <a href="'.htmlspecialchars($url.$page).'">'.$url.$page."<a></b></p>";
 					} else {
-						echo "<p class='no'>[-] ".$url.$page."</p>";
+						echo '<p class="no">[-] <a href="'.htmlspecialchars($url.$page).'">'.htmlspecialchars($url.$page).'</a></p>';
 					}
 				}
 			?>
